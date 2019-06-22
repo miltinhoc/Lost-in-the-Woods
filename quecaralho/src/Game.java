@@ -8,7 +8,7 @@ public class Game {
     Game(){
         Rectangle rectangle = new Rectangle(0,0,600,900);
         rectangle.draw();
-        Picture background = new Picture(0,0,"resources/background.png");
+        Picture background = new Picture(0,0,"resources/background.jpg");
         background.draw();
     }
 
@@ -27,11 +27,13 @@ public class Game {
                 for (int i=0;i<50;i++){
                     Thread.sleep(5);
                     player.move();
+                    branchMove.move();
                 }
 
                 for (int i=0;i<50;i++){
                     Thread.sleep(5);
                     player.moveD();
+                    branchMove.move();
                 }
                 player.setJump(false);
             }
@@ -40,11 +42,13 @@ public class Game {
                 for (int i=0;i<70;i++){
                     Thread.sleep(5);
                     player.up();
+                    branchMove.move();
                 }
 
                 for (int i=0;i<70;i++){
                     Thread.sleep(5);
                     player.down();
+                    branchMove.move();
                 }
                 player.setSalto(false);
             }
@@ -54,6 +58,8 @@ public class Game {
                 while (player.isLeft()){
                     player.left();
                     Thread.sleep(9);
+
+                    branchMove.move();
                 }
             }
 
@@ -61,6 +67,7 @@ public class Game {
                 while (player.isRight()){
                     player.right();
                     Thread.sleep(9);
+                    branchMove.move();
                 }
             }
 
@@ -72,11 +79,13 @@ public class Game {
                 for (int i=0;i<50;i++){
                     Thread.sleep(5);
                     player.moveL();
+                    branchMove.move();
                 }
 
                 for (int i=0;i<50;i++){
                     Thread.sleep(5);
                     player.moveDLeft();
+                    branchMove.move();
                 }
 
                 player.setJumpLeft(false);
