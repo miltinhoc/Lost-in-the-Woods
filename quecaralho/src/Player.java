@@ -179,6 +179,7 @@ public class Player implements KeyboardHandler {
                     side = true;
                 }
                 left = true;
+                //gg
                 break;
         }
     }
