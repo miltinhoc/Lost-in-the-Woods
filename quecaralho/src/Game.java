@@ -2,7 +2,7 @@ import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Game {
-
+    BranchMove branchMove = new BranchMove();
     private Player player;
 
     Game(){
@@ -14,8 +14,9 @@ public class Game {
 
     public void start() throws InterruptedException {
         player = new Player();
-
+        branchMove.createFirstBranch();
         while (true){
+            branchMove.move();
             Thread.sleep(10);
             if (player.isJump()){
                 if (player.isSide()){
